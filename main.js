@@ -16,7 +16,7 @@ const distance = MathC.calculateDistance(pointA, pointB);
 
 const medianPoint = MathC.medianPoint(pointA, pointB);
 
-const distance = MathC.distanceFromOrigin(pointA);
+const distanceFromOrigin = MathC.distanceFromOrigin(pointA);
 
 const nearest = MathC.nearestPoint(pointA, pointB, pointC, pointD, pointE, pointF);
 
@@ -28,8 +28,19 @@ console.log(medianPoint);
 
 const distanceFromB = pointA.distanceFrom(pointB);
 
-const distanceFromOrigin = pointA.distanceFromOrigin();
+console.log(distanceFromB);
+
+const distanceFromOriginOfA = pointA.distanceFromOrigin();
+
+console.log(distanceFromOriginOfA);
 
 const medianFromB = pointA.medianPointFromPoint(pointB);
 
+console.log(medianFromB);
+
 const nearestToA = pointA.nearestPoint(pointB, pointC, pointD, pointE);
+
+console.log(nearestToA);
+
+
+// let bev2 = new Bevanda(name: "chinotto", insertionDate: new Date())
