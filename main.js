@@ -54,11 +54,11 @@ const topRight = new Point(8, 6);
 const bottomRight = new Point(8, 1);
 const bottomLeft = new Point(1, 1);
 
-const rect1 = new Rectangle(topLeft, topRight, bottomRight, bottomLeft);
+const rect = new Rectangle(topLeft, topRight, bottomRight, bottomLeft);
 
-console.log(rect1.perimeter);
+console.log(rect.perimeter);
 
-console.log(rect1.area);
+console.log(rect.area);
 
 
 const point1 = new Point(1, 1);
@@ -72,3 +72,42 @@ console.log(tri1.perimeter);
 console.log(tri1.area);
 
 // let bev2 = new Bevanda(name: "chinotto", insertionDate: new Date())
+
+const startingPoint= new Point(6,6);
+
+const rect1 = new Rectangle1(startingPoint, 4, 3);
+
+console.log(rect1);
+
+const tl= new Point(6 ,6);
+
+const br= new Point(1 ,2);
+
+const rect2 = new Rectangle2(tl, br);
+
+
+console.log(rect2.calculatePerimeter())
+
+
+const mappa = new Map();
+
+// mappa.set(1, "pippo");
+
+// mappa.set(2, "pippo");
+
+// mappa.set(1, "paperino");
+
+// console.log(mappa);
+
+
+const rect3 = new Rect(tl, br);
+
+
+const quad1 = new Quadrato(tl, 6);
+
+const quad2 = new Quad(tl, 6);
+
+
+console.log("con classe", quad1)
+console.log("con prototipo", quad2);
+
