@@ -3,13 +3,13 @@ class Rectangle2{
     constructor(topLeft, bottomRight) {
         this.topLeft = topLeft
         this.bottomRight = bottomRight;
-        this.topRight = Rectangle2.generateTopRightPoint(topLeft, bottomRight)
+        this.topRight = new Point(this.bottomRight.x, this.topLeft.y);
         this.bottomLeft = new Point(topLeft.x, bottomRight.y);
     }
 
-    static generateTopRightPoint(topLeft, bottomRight){
-        return new Point(bottomRight.x, topLeft.y);
-    }
+    // static generateTopRightPoint(topLeft, bottomRight){
+    //     return new Point(bottomRight.x, topLeft.y);
+    // }
 
     get perimeter(){
         return this.topLeft.distanceFrom(this.topRight)
@@ -33,8 +33,9 @@ class Rectangle2{
 }
 
 
-class Quadrato extends Rectangle2{
+class Square extends Rectangle2{
     constructor(topLeft, side){
         super(topLeft, new Point(topLeft.x + side, topLeft.y + side));
+        this.side = side;
     }
 }

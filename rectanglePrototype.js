@@ -11,6 +11,7 @@ Rect.prototype.area = function(){
              * this.bottomRight.distanceFrom(this.topRight);
 }
 
+
 Rect.prototype.perimeter = function(){
     return this.topLeft.distanceFrom(this.topRight)
              + this.topRight.distanceFrom(this.bottomRight)
@@ -20,11 +21,14 @@ Rect.prototype.perimeter = function(){
 
 
 
-function Quad(topLeft, side){
-    this.topLeft = topLeft;
+function Squa(topLeft, side){
+    // this.topLeft = topLeft;
+    // this.side = side;
+    // this.bottomRight = new Point(this.topLeft.x+side, this.topLeft.y+side);
+    // this.topRight = new Point(this.bottomRight.x, this.topLeft.y);
+    // this.bottomLeft = new Point(this.topLeft.x, this.bottomRight.y);
+    Rect.call(this, topLeft, new Point(topLeft.x + side, topLeft.y + side))
     this.side = side;
-    this.bottomRight = new Point(topLeft.x+side, topLeft.y+side);
-
+    Object.setPrototypeOf(Quad.prototype, Rect.prototype);
 }
-const rect = new Rect(topLeft, side);
-Quad.prototype = rect;
+
