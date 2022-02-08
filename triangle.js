@@ -28,12 +28,17 @@ class RightTriangle extends Triangle{
     }
 
     calculateHp(){
-        const c1 = p1.distanceFrom(p2);
-        const c2 = p2.distanceFrom(p3);
+        const c1 = this.point1.distanceFrom(this.point2);
+        const c2 = this.point2.distanceFrom(this.point3);
 
         const hp = Math.sqrt(Math.pow(c1, 2) + Math.pow(c2,2));
         
         return hp
 
     }
+}
+
+
+class ScalTriang extends Triangle{
+
 }

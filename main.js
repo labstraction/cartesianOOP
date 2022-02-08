@@ -103,11 +103,21 @@ const mappa = new Map();
 const rect3 = new Rect(tl, br);
 
 
-const quad1 = new Quadrato(tl, 6);
+const quad1 = new Square(tl, 6);
 
-const quad2 = new Quad(tl, 6);
+const quad2 = new Squa(tl, 6);
 
 
 console.log("con classe", quad1)
 console.log("con prototipo", quad2);
+
+
+console.log(quad2.perimeter());
+
+
+const range = new Range(0, 10, 2);
+
+for (const number of range) {
+    console.log(number);
+}
 
